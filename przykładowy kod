@@ -1,0 +1,48 @@
+licznik = 0
+
+def dzialanie(dz = '+'):
+    a = float(input("Podaj a: "))
+    b = float(input("Podaj b: "))
+    wynik = 0
+    match(dz):
+        case '+': wynik=a+b
+        case '-': wynik=a-b
+        case '*': wynik=a*b
+        case '/': wynik = ( a/b if b!=0 else 0 )
+    print(a,dz,b,"=",wynik)
+    pass
+
+while True:
+    if licznik == 50:
+        break
+    print("nigdy się nie kończę!")
+    #licznik = licznik + 1
+    licznik += 1
+    wartosc = input("Podaj coś...: ")
+    if wartosc == "EXIT":
+        break
+    if wartosc == "SUMA":
+        dzialanie()
+        #a = float(input("Podaj a: "))
+        #b = float(input("Podaj b: "))
+        #suma = a+b
+        #if int(str(suma).split('.')[1]) == 0:
+        #    print("Suma",a,"i",b,"wynosi:", int(a+b))
+        #else:
+        #    print("Suma",a,"i",b,"wynosi:", a+b)
+    if wartosc == "ROZNICA":
+        dzialanie('-')
+        #a = float(input("Podaj a: "))
+        #b = float(input("Podaj b: "))
+        #suma = a-b
+        #if int(str(suma).split('.')[1]) == 0:
+        #    print("Suma",a,"i",b,"wynosi:", int(a-b))
+        #else:
+        #    print("Suma",a,"i",b,"wynosi:", a-b)
+    if wartosc == "MNOZENIE":
+        dzialanie('*')
+    if wartosc == "DZIEL":
+        dzialanie('/')
+
+print("A jednak się kończę...")
+    
